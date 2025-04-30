@@ -21,7 +21,7 @@ def transcribe_server():
         # 学習用に音声を保存する場合の処理
         if save_audio == "True":  
             with open(file_name, 'rb') as f_src:  # 元ファイルを読み込み
-                destination_path = "path_tp_save"  # 保存先のパス
+                destination_path = "path_to_save"  # 保存先のパス
                 with open(destination_path, 'wb') as f_dst:  # 保存先ファイルに書き込み
                     f_dst.write(f_src.read())
         

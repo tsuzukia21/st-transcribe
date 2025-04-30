@@ -15,7 +15,7 @@ For details on usage and code, please refer to the following links.(Japanese)
 
 使い方、コードの詳細は以下のリンクから確認できます。
 
-[Pythonだけで完結！Streamlit + Flask + Whisperで作る文字起こしアプリを構築してみよう](https://zenn.dev/tsuzukia/articles/ca4704708c1066)
+[Pythonだけで完結！Streamlit + Flask + Whisperで作る文字起こしアプリを構築してみよう](https://zenn.dev/tsuzukia/articles/05162d92997634)
 
 # Installation
 
