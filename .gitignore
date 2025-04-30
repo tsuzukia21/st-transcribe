@@ -1,0 +1,13 @@
+.vscode/
+__pycache__/
+*.pyc
+*.csv
+*.xlsx
+.env
+*.mp3
+*.wav
+*.m4a
+*.mp4
+*.txt
+*.json
+*.yaml
