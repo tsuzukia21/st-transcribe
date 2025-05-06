@@ -1,6 +1,6 @@
 # Demo
 
-![Demo](./demo.gif)
+![Demo](demo.gif)
 
 # Description
 
@@ -18,7 +18,7 @@ For details on usage and code, please refer to the following links.(Japanese)
 
 [Streamlit＋Flask＋Whisperで社内オンプレ文字起こしサーバーを構築(同期処理)](https://zenn.dev/tsuzukia/articles/05162d92997634)
 
-[Streamlit＋FastAPI＋Whisperで社内オンプレ文字起こしサーバーを構築(非同期処理)]([https://zenn.dev/tsuzukia/articles/05162d92997634](https://zenn.dev/tsuzukia/articles/2ec8a1fce80b1a))
+[Streamlit＋FastAPI＋Whisperで社内オンプレ文字起こしサーバーを構築(非同期処理)](https://zenn.dev/tsuzukia/articles/2ec8a1fce80b1a)
 
 # Installation
 
