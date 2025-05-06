@@ -25,7 +25,7 @@ async def transcribe(audio_file, websocket: WebSocket, session_id: int, should_s
     model = WhisperModel("large-v3", device="cuda", compute_type="float16")
 
     try:
-        # モデルによる文字起こし処理（CPUバウンドな処理なのでto_threadで実行）
+        # to_threadでメインスレッドをブロックしないよう実行
         segments, info = await asyncio.to_thread(  
             model.transcribe,  
             audio_file,  

@@ -142,11 +142,11 @@ if 'done_event' not in st.session_state:
     st.session_state.done_event = asyncio.Event()  # 文字起こし完了イベント
 if 'stop_event' not in st.session_state:  
     st.session_state.stop_event = asyncio.Event()  # 文字起こし停止イベント
+if 'server_status' not in st.session_state:  
+    st.session_state.server_status = False  # サーバー接続状態
 
 # アプリのタイトル
 st.title("音声文字起こし")
-if 'server_status' not in st.session_state:  
-    st.session_state.server_status = ""  # サーバー接続状態
 st.write('**Whisperを利用して音声データを文字起こしすることが出来ます。**')
 
 # サーバー接続状態のチェック
@@ -155,17 +155,17 @@ if st.session_state.server_status == "":
         try:
             # サーバーが起動しているか確認
             requests.get("http://localhost:5001/")
-            st.session_state.server_status = "OK"
+            st.session_state.server_status = True
         except requests.ConnectionError:
-            st.session_state.server_status = "NG"
+            st.session_state.server_status = False
 
 # サーバーが起動していない場合はエラーを表示して終了
-if st.session_state.server_status == "NG":
+if st.session_state.server_status == False:
     st.error('サーバーが立ち上がっていません。', icon=":material/error:")
     st.stop()
 
 # サーバーが起動している場合はUIを表示
-if st.session_state.server_status == "OK":
+if st.session_state.server_status == True:
     # モデル選択ラジオボタン
     model = st.radio("model", ["汎用モデル", "チューニングモデル"])
     # 音声ファイルアップローダー
